@@ -11,7 +11,7 @@ export default {
     }
   },
   created() {
-    console.log(this.user)
+    // console.log(this.user)
     let blogId=this.$route.params.blogId
     blog.getDetail({blogId:blogId}).then((res)=>{
       this.user=res.data.user;
