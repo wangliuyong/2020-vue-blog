@@ -22,15 +22,15 @@ export default {
   },
 
   getDetail({ blogId }) {
-    return request(URL.GET_DETAIL.replace(':blogId', blogId))
+    return request(`/blog/${blogId}`)
   },
 
   updateBlog({ blogId }, { title, content, description, atIndex }) {
-    return request(URL.UPDATE.replace(':blogId', blogId), 'PATCH', { title, content, description, atIndex })
+    return request(`/blog/${blogId}`, 'PATCH', { title, content, description, atIndex })
   },
 
   deleteBlog({ blogId }) {
-    return request(URL.DELETE.replace(':blogId', blogId), 'DELETE')
+    return request(`/blog/${blogId}`, 'DELETE')
   },
 
   createBlog({ title = '', content = '', description = '', atIndex = false} = { title: '', content: '', description: '', atIndex: false}) {
