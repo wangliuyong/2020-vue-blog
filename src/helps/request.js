@@ -1,8 +1,11 @@
 import axios from 'axios'
 import { Message } from 'element-ui'
 
+// 设置post 请求体类型
 axios.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded'
+// 配置请求域名
 axios.defaults.baseURL = 'https://blog-server.hunger-valley.com'
+// 请求时带上cookie,默认不带cookie(跨域)
 axios.defaults.withCredentials = true
 
 export default function request(url, type = 'GET', data = {}) {
