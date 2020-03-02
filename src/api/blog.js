@@ -1,4 +1,4 @@
-import request from '@/helpers/request'
+import request from '../helps/request'
 
 const URL = {
   GET_LIST: '/blog',
