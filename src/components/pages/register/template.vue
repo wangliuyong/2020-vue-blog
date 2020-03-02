@@ -2,6 +2,7 @@
   <div class="hello">
     <h1>{{ msg }}</h1>
     <a-button type="primary">Primary</a-button>
+     <el-button>默认按钮</el-button>
   </div>
 </template>
 
